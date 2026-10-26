@@ -1,4 +1,4 @@
-// Cada imagen tiene su dirección y un texto alternativo.
+
 const imagenes = [
   { ruta: 'images/cafe.svg', descripcion: 'Dibujo de una taza de café' },
   { ruta: 'images/pasteleria.svg', descripcion: 'Dibujo de pastelería recién hecha' },
@@ -19,7 +19,7 @@ if (imagenCarrusel) {
   document.querySelector('#siguiente').addEventListener('click', function () { mostrarImagen(indice + 1); });
 }
 
-// El formulario se valida con JavaScript y muestra mensajes en la página.
+
 const formulario = document.querySelector('#formulario-contacto');
 if (formulario) {
   formulario.addEventListener('submit', function (evento) {
@@ -48,7 +48,6 @@ if (formulario) {
     if (mensaje.length < 10 || mensaje.length > 500) { errorMensaje.textContent = 'El mensaje debe tener entre 10 y 500 caracteres.'; formularioValido = false; }
     if (!formularioValido) { estado.textContent = 'Revisá los campos marcados e intentá nuevamente.'; return; }
 
-    // Creamos elementos HTML para mostrar los datos ingresados.
     const resumen = document.querySelector('#resumen');
     resumen.replaceChildren();
     const titulo = document.createElement('h3');
